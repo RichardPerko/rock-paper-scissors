@@ -8,10 +8,11 @@
 </head>
 <body>
     <script>
-
+        //game function will start the process of playing the game
         game()
 
         function game(){
+          //for loop which will loop five times and call all approriate functions
           for (i = 1; i < 6; i++){
             console.log("Round: ", i)
             let playerSelection = playerPlay()
@@ -20,7 +21,8 @@
           }
         }
 
-
+        //playRound will return the result of both the computer and players choice
+        //using if else if statements and logical comparisons to find the result
        function playRound(playerSelection, computerSelection){
          if (playerSelection === computerSelection){
            return "Draw!"
@@ -39,12 +41,15 @@
          }
         }
 
+        //asks the player for their input and returns the result 
         function playerPlay(){
            let playerChoice = window.prompt("Rock, Paper, or Scissors?");
             console.log("Players choice: ", playerChoice);
            return playerChoice.toLowerCase()
         }
 
+        //gets the result of the computer by randomly generating a number
+        //and then using switch statments to return the choice
         function computerPlay(){
            let computerResult = Math.floor(Math.random() * 3) + 1
            switch (computerResult){
