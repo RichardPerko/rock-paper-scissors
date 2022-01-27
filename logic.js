@@ -1,20 +1,27 @@
-
 //game function will start the process of playing the game
-game()
 
-function game(){
-    let playerSelection = playerPlay()
+const rock = document.querySelector('#rock');
+rock.onclick = () => game("rock");
+
+const paper = document.querySelector('#paper');
+paper.onclick = () => game("paper");
+
+const scissors = document.querySelector('#scissors');
+scissors.onclick = () => game("scissors");
+
+function game(playerChoice){
+    let playerSelection = playerChoice;
     let computerSelection = computerPlay()
     console.log(playRound(playerSelection, computerSelection))
   
 }
 
-//asks the player for their input and returns the result 
-function playerPlay(){
-   let playerChoice = window.prompt("Rock, Paper, or Scissors?");
-    console.log("Players choice: ", playerChoice);
-   return playerChoice.toLowerCase()
-}
+// //asks the player for their input and returns the result 
+// function playerPlay(){
+//    let playerChoice = window.prompt("Rock, Paper, or Scissors?");
+//     console.log("Players choice: ", playerChoice);
+//    return playerChoice.toLowerCase()
+// }
 
 //gets the result of the computer by randomly generating a number
 //and then using switch statments to return the choice
@@ -34,6 +41,7 @@ function computerPlay(){
            return "scissors"
            break;
    }
+}
 
 //playRound will return the result of both the computer and players choice
 //using if else if statements and logical comparisons to find the result
@@ -53,6 +61,4 @@ function playRound(playerSelection, computerSelection){
  }  else if (computerSelection === "paper" && playerSelection === "rock"){
      return "Computer wins! Paper beats Rock!"
  }
-}
-
 }
