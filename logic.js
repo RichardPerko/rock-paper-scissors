@@ -9,19 +9,20 @@ paper.onclick = () => game("paper");
 const scissors = document.querySelector('#scissors');
 scissors.onclick = () => game("scissors");
 
+const displayResults = document.querySelector('#displayResults')
+const results = document.createElement('div')
+results.classList.add('results');
+
+displayResults.append(results);
+
+
 function game(playerChoice){
     let playerSelection = playerChoice;
     let computerSelection = computerPlay()
-    console.log(playRound(playerSelection, computerSelection))
+
+    console.log (playRound(playerSelection, computerSelection))
   
 }
-
-// //asks the player for their input and returns the result 
-// function playerPlay(){
-//    let playerChoice = window.prompt("Rock, Paper, or Scissors?");
-//     console.log("Players choice: ", playerChoice);
-//    return playerChoice.toLowerCase()
-// }
 
 //gets the result of the computer by randomly generating a number
 //and then using switch statments to return the choice
@@ -47,18 +48,18 @@ function computerPlay(){
 //using if else if statements and logical comparisons to find the result
 function playRound(playerSelection, computerSelection){
  if (playerSelection === computerSelection){
-   return "Draw!"
+     results.textContent = "Draw!"
  } else if (playerSelection === "rock" && computerSelection === "scissors"){
-     return "Player wins! Rock beats Scissors!"
+    results.textContent = "Player wins! Rock beats Scissors!"
  } else if (playerSelection === "scissors" && computerSelection === "paper"){
-     return "Player wins! Scissors beats paper!"
- } else if (playerSelection === "paper" && computerSelection === "pock"){
-     return "Player wins! Paper beats Rock!"
+    results.textContent = "Player wins! Scissors beats paper!"
+ } else if (playerSelection === "paper" && computerSelection === "rock"){
+    results.textContent = "Player wins! Paper beats Rock!"
  } else if (computerSelection === "rock" && playerSelection === "scissors"){
-     return "Computer wins! Rock beats Scissors!"
+    results.textContent = "Computer wins! Rock beats Scissors!"
  } else if (computerSelection === "scissors" && playerSelection === "paper"){
-     return "Computer wins! Scissors beats paper!"
+    results.textContent = "Computer wins! Scissors beats paper!"
  }  else if (computerSelection === "paper" && playerSelection === "rock"){
-     return "Computer wins! Paper beats Rock!"
+    results.textContent = "Computer wins! Paper beats Rock!"
  }
 }
