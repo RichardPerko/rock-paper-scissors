@@ -25,10 +25,10 @@ const results = document.createElement('div');
 results.classList.add('results');
 displayResults.append(results);
 
-const buttons = document.querySelector('#buttonContainer');
+const score = document.querySelector('#displayScore');
 const scoreKeeper = document.createElement('div');
 scoreKeeper.classList.add('scoreKeeper');
-buttons.append(scoreKeeper);
+score.append(scoreKeeper);
 
 //main function
 function game(playerChoice){

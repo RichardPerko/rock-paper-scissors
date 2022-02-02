@@ -1,0 +1,36 @@
+.bigContainer{
+    background-color: grey;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#displayResults{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scoreKeeper{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#rock,
+#paper,
+#scissors{
+    margin: 10px;
+    background-color:teal;
+}
