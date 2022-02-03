@@ -32,6 +32,7 @@ score.append(scoreKeeper);
 
 //main function
 function game(playerChoice){
+   console.log("Player choice: "+playerChoice);
    // gathers the information to play the game, players choice is passed in
    // through the button click, while computer choice calls a function
     let playerSelection = playerChoice;
@@ -72,12 +73,15 @@ function computerPlay(){
    let computerResult = Math.floor(Math.random() * 3) + 1
    switch (computerResult){
        case 1:
+           console.log("Computer choice: rock")
            return "rock"
            break;
        case 2:
+          console.log("Computer choice: paper")
            return "paper"
            break;
        case 3:
+          console.log("Computer choice: scissors")
            return "scissors"
            break;
    }

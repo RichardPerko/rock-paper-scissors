@@ -9,15 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bigContainer">
-      <h1>Rock Paper Scissors</h1>
-      <div id="displayResults"></div>
-      <div id="buttonContainer">
-        <input type="image" src="img/rock.png" id ="rock">
-        <input type="image" src="img/paper.png" id="paper">
-        <input type="image" src="img/scissors.png" id="scissors">
+  <div class="header">
+    <a onClick="window.location.reload()"><h1>Rock Paper Scissors</h1></a>
+    <ul>
+      <li><a href="https://twitter.com/CarlPerko" target="_blank"><input type="image" src="img/twitter-sign.png" height="32px"alt="twitter logo"></a></li>
+      <li><a href="https://github.com/RichardPerko/rock-paper-scissors" target="_blank"><input type="image" src="img/github-sign.png" height="32px" alt="github logo"></a></li>
+      <li><a href="https://www.theodinproject.com/" target="_blank"><input type="image" src="img/OdinProject.svg" height="32px"></a></li>
+      <li><div class="dropDown">
+        <button class="dropButton">Icon sources</button>
+        <div class="dropDownContents">
+          <a href="https://www.flaticon.com/free-icons/twitter" target="_blank" title="twitter icons">Twitter icons created by Dave Gandy - Flaticon</a> 
+          <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Dave Gandy - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/rock" target="_blank" title="rock icons">Rock icons created by Agung Rama - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/paper" target="_blank" title="paper icons">Paper icons created by Neveraemje - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/scissors" target="_blank" title="scissors icons">Scissors icons created by Freepik - Flaticon</a>
+        </div>
       </div>
-      <div id="displayScore"></div>
-    </div>
+    </div></li>
+    </ul>
+  </div>
+  <div class="resultsBox">
+    <div id="displayResults"></div>
+    <div id="displayScore"></div>
+  </div>
+      <div id="buttonContainer">
+        <input type="image" src="img/rock.png" id ="rock" alt="rock selector">
+        <input type="image" src="img/paper.png" id="paper" alt ="paper selector">
+        <input type="image" src="img/scissors.png" id="scissors" alt="scissors selector">
+      </div>
+    <div class="footer">
+      <h4>Created by: Richard Perko</h4>
 </body>
-</html>
+</html></html>
