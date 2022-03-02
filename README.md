@@ -2,6 +2,8 @@
 11 Jan 2022
 The Odin Project
 
+git test
+
 This game will allow you to play rock paper scissors against the computer. Im excited to start coding this as my first real project!
 
 Revisit update 
